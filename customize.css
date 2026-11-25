@@ -1,0 +1,14 @@
+/* 温馨手绘风格配色
+   奶油米色底 + 温暖橄榄绿点缀，圆角稍大，像蜡笔画里的小卡片。 */
+:root {
+  --accent-light: #8a9e6a;
+  --accent-dark: #c4d4a8;
+  --site-width: 1440px;
+  --discovery-width: 576px;
+  --featured-height: 188px;
+  --featured-height-mobile: 176px;
+  --mobile-island-width: 316px;
+  --card-radius: 24px;
+  --sans: Inter, "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+  --serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+}

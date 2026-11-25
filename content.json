@@ -1,0 +1,406 @@
+{
+  "$schema": "./content.schema.json",
+  "schemaVersion": 1,
+  "defaultLanguage": "zh",
+  "name": "张圣艳",
+  "logo": "",
+  "location": {
+    "zh": "中国",
+    "en": "China"
+  },
+  "email": "",
+  "demo": false,
+  "motto": {
+    "zh": "用手画，用心做。",
+    "en": "Draw by hand, make with heart."
+  },
+  "mottoAccent": {
+    "zh": "用心做",
+    "en": "with heart"
+  },
+  "about": {
+    "zh": "张圣艳，设计专业学生。喜欢用手绘和建模探索产品形态，也在学习把界面做得更温柔。",
+    "en": "Zhang Shengyan, design student. Enjoys exploring form through hand drawing and 3D modeling, and learning to make gentler interfaces."
+  },
+  "availability": {
+    "zh": "正在认真做毕业设计中",
+    "en": "Working on graduation project"
+  },
+  "contactTitle": {
+    "zh": "来联系我吧",
+    "en": "Say hello"
+  },
+  "contactIntro": {
+    "zh": "可以一起聊设计、聊产品，或者看看有没有什么想一起做点的事。",
+    "en": "Let's talk about design, products, or something we could make together."
+  },
+  "categories": [
+    {
+      "id": "visual",
+      "label": {
+        "zh": "视觉",
+        "en": "Visual"
+      },
+      "hint": {
+        "zh": "排版与版面",
+        "en": "Layout & type"
+      },
+      "icon": "design",
+      "route": "work",
+      "filters": [
+        "visual",
+        "graphic"
+      ]
+    },
+    {
+      "id": "product",
+      "label": {
+        "zh": "产品",
+        "en": "Product"
+      },
+      "hint": {
+        "zh": "形态与建模",
+        "en": "Form & model"
+      },
+      "icon": "design",
+      "route": "work",
+      "filters": [
+        "product"
+      ]
+    },
+    {
+      "id": "interaction",
+      "label": {
+        "zh": "交互",
+        "en": "Interaction"
+      },
+      "hint": {
+        "zh": "界面与体验",
+        "en": "Interface & UX"
+      },
+      "icon": "code",
+      "route": "work",
+      "filters": [
+        "interaction"
+      ]
+    },
+    {
+      "id": "articles",
+      "label": {
+        "zh": "随笔",
+        "en": "Notes"
+      },
+      "hint": {
+        "zh": "学习与思考",
+        "en": "Learning & thoughts"
+      },
+      "icon": "article",
+      "route": "articles",
+      "filters": []
+    }
+  ],
+  "projectCategories": [
+    {
+      "id": "visual",
+      "label": {
+        "zh": "视觉设计",
+        "en": "Visual"
+      }
+    },
+    {
+      "id": "graphic",
+      "label": {
+        "zh": "排版海报",
+        "en": "Graphic"
+      }
+    },
+    {
+      "id": "product",
+      "label": {
+        "zh": "产品设计",
+        "en": "Product"
+      }
+    },
+    {
+      "id": "interaction",
+      "label": {
+        "zh": "交互设计",
+        "en": "Interaction"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "retro-coffee-machine",
+      "title": {
+        "zh": "复古风格咖啡机设计版面",
+        "en": "Retro Coffee Machine Layout"
+      },
+      "category": "visual",
+      "summary": {
+        "zh": "以温暖的复古色调，为一台咖啡机设计完整的视觉版面。",
+        "en": "A complete visual layout for a coffee machine in warm retro tones."
+      },
+      "detail": {
+        "zh": "课程作业。从咖啡机的使用场景出发，挑选复古配色与手绘插画元素，完成产品海报、说明书内页与包装的整套版面设计。\n\n设计重点：保留产品的温度感，同时让信息层级清晰易读。",
+        "en": "Coursework project. Starting from the coffee machine's usage context, I selected a retro palette and hand-drawn illustration elements to complete product posters, manual spreads and packaging layouts.\n\nKey focus: keeping the product's warmth while maintaining clear information hierarchy."
+      },
+      "cover": "media/coffee-machine-cover.png",
+      "coverFit": "contain",
+      "gallery": [
+        "media/coffee-machine-01.png",
+        "media/layout-practice.png"
+      ],
+      "url": "",
+      "date": "2026-10",
+      "role": {
+        "zh": "视觉设计 / 排版",
+        "en": "Visual design / Layout"
+      },
+      "featured": true
+    },
+    {
+      "id": "dog-goggles",
+      "title": {
+        "zh": "老年犬眼疾预防智能护目镜",
+        "en": "Smart Goggles for Senior Dog Eye Care"
+      },
+      "category": "product",
+      "summary": {
+        "zh": "为老年犬设计的一款兼具防护与健康监测功能的智能护目镜。",
+        "en": "Smart goggles designed for senior dogs, combining protection with health monitoring."
+      },
+      "detail": {
+        "zh": "产品设计项目。针对老年犬常见的白内障、干眼症等眼部问题，设计一款智能护目镜：白天阻挡紫外线与碎屑，夜晚监测眼部湿润度，当指标异常时提醒主人。\n\n设计重点：让护目镜戴得舒适、看得自然，同时让数据变得可读。",
+        "en": "Product design project. Addressing common eye issues in senior dogs such as cataracts and dry eye, designed smart goggles that block UV and debris during the day while monitoring eye moisture at night, alerting the owner when indicators are abnormal.\n\nKey focus: making the goggles comfortable and natural-looking to wear, while keeping data readable."
+      },
+      "cover": "media/dog-goggles-cover.png",
+      "coverFit": "contain",
+      "gallery": [
+        "media/dog-goggles-cover.png",
+        "media/dog-goggles-01.png"
+      ],
+      "url": "",
+      "date": "2026-11",
+      "role": {
+        "zh": "产品设计 / 调研",
+        "en": "Product design / Research"
+      },
+      "featured": true
+    },
+    {
+      "id": "gamified-habit-app",
+      "title": {
+        "zh": "游戏化自律打卡 App 设计",
+        "en": "Gamified Habit Tracker App"
+      },
+      "category": "interaction",
+      "summary": {
+        "zh": "把自律这件事做得更有意思一点，从调研到原型。",
+        "en": "Making self-discipline a little more playful — from research to prototype."
+      },
+      "detail": {
+        "zh": "独立完成的交互设计项目。首先对市面上的打卡应用进行调研分析，总结用户痛点；然后基于游戏化思路设计信息架构与主要流程；最后用 Figma 完成交互原型。\n\n研究范围：打卡应用调研文档（PDF）、原型演示视频。",
+        "en": "Interaction design project completed independently. First researched and analyzed existing habit-tracking apps to identify user pain points; then designed the information architecture and main flows around gamification; finally built an interactive prototype in Figma.\n\nDeliverables: research PDF and prototype demo video."
+      },
+      "cover": "media/habit-app-cover.png",
+      "coverFit": "contain",
+      "gallery": [
+        "media/habit-app-02.png",
+        "media/habit-app-03.png"
+      ],
+      "url": "",
+      "date": "2026-10",
+      "role": {
+        "zh": "交互设计 / 调研 / 原型",
+        "en": "Interaction design / Research / Prototype"
+      },
+      "featured": true
+    },
+    {
+      "id": "coffee-machine-model",
+      "title": {
+        "zh": "咖啡机建模",
+        "en": "Coffee Machine Model"
+      },
+      "category": "product",
+      "summary": {
+        "zh": "Rhino 中完成的一台咖啡机产品建模练习。",
+        "en": "A coffee machine product model built in Rhino."
+      },
+      "detail": {
+        "zh": "产品设计课程作业。从真实咖啡机的比例与曲面出发，用 Rhino 完成 NURBS 建模，练习复杂曲面的构建与倒角处理。",
+        "en": "Product design coursework. Starting from a real coffee machine's proportions and surfaces, modeled in Rhino with NURBS, practicing complex surface construction and filleting."
+      },
+      "cover": "media/tide.svg",
+      "coverFit": "contain",
+      "gallery": [
+        "media/tide.svg",
+        "media/study-12.svg"
+      ],
+      "url": "",
+      "date": "2026-08",
+      "role": {
+        "zh": "产品建模",
+        "en": "Product modeling"
+      },
+      "featured": true
+    },
+    {
+      "id": "door-lock-model",
+      "title": {
+        "zh": "门锁建模",
+        "en": "Door Lock Model"
+      },
+      "category": "product",
+      "summary": {
+        "zh": "门锁产品形态的 3D 建模探索。",
+        "en": "3D modeling exploration of door lock product form."
+      },
+      "detail": {
+        "zh": "关注握把与锁身的曲面过渡，以及不同材质在建模中的表达。",
+        "en": "Focused on surface transitions between the handle and body, and how different materials are expressed in the model."
+      },
+      "cover": "media/orbit.svg",
+      "coverFit": "contain",
+      "gallery": [
+        "media/orbit.svg",
+        "media/field.svg"
+      ],
+      "url": "",
+      "date": "2026-08",
+      "role": {
+        "zh": "产品建模",
+        "en": "Product modeling"
+      },
+      "featured": false
+    },
+    {
+      "id": "mouse-model",
+      "title": {
+        "zh": "鼠标建模练习",
+        "en": "Mouse Model Study"
+      },
+      "category": "product",
+      "summary": {
+        "zh": "从简单形态开始，练手曲面建模。",
+        "en": "Starting from simple form to practice surface modeling."
+      },
+      "detail": {
+        "zh": "建模入门练习。用一个相对简单的鼠标形体，理解 Rhino 中 loft、sweep 和 surface blend 的基本操作。",
+        "en": "Beginner modeling exercise. Used a relatively simple mouse form to understand loft, sweep and surface blend basics in Rhino."
+      },
+      "cover": "media/prism.svg",
+      "coverFit": "contain",
+      "gallery": [
+        "media/prism.svg"
+      ],
+      "url": "",
+      "date": "2026-07",
+      "role": {
+        "zh": "产品建模",
+        "en": "Product modeling"
+      },
+      "featured": false
+    }
+  ],
+  "articleCategories": [
+    {
+      "id": "design-notes",
+      "label": {
+        "zh": "设计随记",
+        "en": "Design notes"
+      },
+      "description": {
+        "zh": "做东西时的一些小想法",
+        "en": "Small thoughts while making"
+      }
+    },
+    {
+      "id": "learning",
+      "label": {
+        "zh": "学习记录",
+        "en": "Learning"
+      },
+      "description": {
+        "zh": "在学什么、怎么学",
+        "en": "What I'm learning and how"
+      }
+    },
+    {
+      "id": "reading",
+      "label": {
+        "zh": "阅读笔记",
+        "en": "Reading"
+      },
+      "description": {
+        "zh": "书里看到有意思的东西",
+        "en": "Interesting things from books"
+      }
+    }
+  ],
+  "articles": [
+    {
+      "id": "goal-directed-design",
+      "title": {
+        "zh": "目标导向设计 · 课堂小组作业",
+        "en": "Goal-Directed Design · Group Coursework"
+      },
+      "category": "design-notes",
+      "date": "2026-10-15",
+      "cover": "media/goal-directed-01.png",
+      "url": "articles/looking-closely.html"
+    },
+    {
+      "id": "gamification-thinking",
+      "title": {
+        "zh": "为什么游戏化能让自律变得有趣",
+        "en": "Why Gamification Makes Self-Discipline Fun"
+      },
+      "category": "learning",
+      "date": "2026-10-08",
+      "cover": "media/habit-app-03.png",
+      "url": "articles/useful-space.html"
+    },
+    {
+      "id": "hand-drawing-vs-cad",
+      "title": {
+        "zh": "手绘和 CAD，其实不冲突",
+        "en": "Hand Drawing and CAD Aren't Enemies"
+      },
+      "category": "reading",
+      "date": "2026-09-22",
+      "cover": "media/layout-practice.png",
+      "url": "articles/unfinished-thought.html"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "design-student",
+      "institution": {
+        "zh": "设计专业 · 在校学习",
+        "en": "Design · In Progress"
+      },
+      "year": {
+        "zh": "2022 — 至今",
+        "en": "2022 — Present"
+      },
+      "title": {
+        "zh": "视觉设计 / 产品设计 / 交互设计",
+        "en": "Visual design / Product design / Interaction"
+      },
+      "description": {
+        "zh": "在校期间完成了排版、产品建模、交互设计等方向的课程作业，同时保持着手绘习惯。",
+        "en": "Completed coursework in layout, product modeling and interaction design, while keeping a hand-drawing habit."
+      }
+    }
+  ],
+  "honors": [],
+  "links": [],
+  "music": {
+    "enabled": false,
+    "invitation": false,
+    "tracks": []
+  },
+  "wordmarkCase": "preserve"
+}

@@ -1,0 +1,443 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portable portfolio content",
+  "description": "Four complete pages using recipient-owned content. Stable category references and local URLs are additionally checked by validate-content.mjs.",
+  "$defs": {
+    "text": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "required": [
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "defaultLanguage",
+    "name",
+    "location",
+    "email",
+    "motto",
+    "categories",
+    "projectCategories",
+    "projects",
+    "articleCategories",
+    "articles",
+    "experiences",
+    "links"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "defaultLanguage": {
+      "enum": [
+        "zh",
+        "en"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "logo": {
+      "type": "string"
+    },
+    "location": {
+      "$ref": "#/$defs/text"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address, or empty to hide the email link."
+    },
+    "motto": {
+      "$ref": "#/$defs/text"
+    },
+    "mottoAccent": {
+      "$ref": "#/$defs/text"
+    },
+    "demo": {
+      "type": "boolean"
+    },
+    "about": {
+      "$ref": "#/$defs/text"
+    },
+    "availability": {
+      "$ref": "#/$defs/text"
+    },
+    "contactIntro": {
+      "$ref": "#/$defs/text"
+    },
+    "contactTitle": {
+      "$ref": "#/$defs/text"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "hint",
+          "icon",
+          "route"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "hint": {
+            "$ref": "#/$defs/text"
+          },
+          "icon": {
+            "enum": [
+              "film",
+              "design",
+              "code",
+              "article"
+            ]
+          },
+          "route": {
+            "enum": [
+              "work",
+              "articles"
+            ]
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "projectCategories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "label": {
+            "$ref": "#/$defs/text"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "category",
+          "summary",
+          "detail",
+          "cover"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "title": {
+            "$ref": "#/$defs/text"
+          },
+          "category": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "summary": {
+            "$ref": "#/$defs/text"
+          },
+          "detail": {
+            "$ref": "#/$defs/text"
+          },
+          "cover": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^(?:$|(?!0000)\\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\\d|3[01]))?)?)$",
+            "description": "Optional date at known precision: YYYY, YYYY-MM, or YYYY-MM-DD. Empty hides the date; complete dates must exist in the calendar."
+          },
+          "role": {
+            "$ref": "#/$defs/text"
+          },
+          "gallery": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "video": {
+            "type": "string"
+          },
+          "demo": {
+            "type": "string"
+          },
+          "featured": {
+            "type": "boolean"
+          },
+          "coverFit": {
+            "enum": [
+              "cover",
+              "contain"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "articleCategories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "description": {
+            "$ref": "#/$defs/text"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "category",
+          "date",
+          "cover",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "title": {
+            "$ref": "#/$defs/text"
+          },
+          "category": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "cover": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "institution",
+          "year",
+          "title",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "institution": {
+            "$ref": "#/$defs/text"
+          },
+          "year": {
+            "$ref": "#/$defs/text"
+          },
+          "title": {
+            "$ref": "#/$defs/text"
+          },
+          "description": {
+            "$ref": "#/$defs/text"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "honors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "icon": {
+            "enum": [
+              "github",
+              "film",
+              "article",
+              "message",
+              "external"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "music": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "tracks"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "invitation": {
+          "type": "boolean"
+        },
+        "tracks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "artist",
+              "audio",
+              "cover"
+            ],
+            "properties": {
+              "title": {
+                "$ref": "#/$defs/text"
+              },
+              "artist": {
+                "$ref": "#/$defs/text"
+              },
+              "audio": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cover": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "wordmarkCase": {
+      "enum": [
+        "preserve",
+        "uppercase"
+      ],
+      "default": "uppercase",
+      "description": "Uppercase preserves legacy behavior; preserve keeps the exact name spelling."
+    },
+    "headerAction": {
+      "type": "object",
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/text"
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "format": "uri-reference",
+          "description": "Safe http(s), mailto, relative public page, or hash link. Defaults to #contact if the entire headerAction is omitted."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
